@@ -59,11 +59,11 @@ Lógica para determinar si se puede prestar el servicio.
 
 ```mermaid
 flowchart TD
-    A[Inicio App] --> B{¿Permiso GPS?}
+    A[Inicio App] --> B{"¿Permiso GPS?"}
     B -->|No| C[Solicitar Permisos Android]
     B -->|Sí| D[Obtener Lat/Long actual]
-    D --> E{¿Está dentro del Polígono?}
-    E -->|No| F[Mostrar Pantalla "Fuera de Zona"]
+    D --> E{"¿Está dentro del Polígono?"}
+    E -->|No| F["Mostrar Pantalla 'Fuera de Zona'"]
     F --> F1[Opción: Notificarme cuando lleguen]
     E -->|Sí| G[Cargar Home con Comercios]
 ```
